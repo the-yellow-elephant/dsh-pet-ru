@@ -30,6 +30,7 @@ mkdirSync(outDir, { recursive: true });
 
 const FILES = [
   'lib/app.js',
+  'lib/standalone.js',
   'lib/chat-panel.js',
   'lib/client.js',
   'lib/index.js',

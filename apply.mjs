@@ -40,6 +40,7 @@ const userConfigPath = join(homedir(), '.dsh', 'dsh-pet', 'main-config.jsonc');
 
 const TABLES = [
   ['lib_app.js.json', 'lib/app.js'],
+  ['lib_standalone.js.json', 'lib/standalone.js'],
   ['lib_chat-panel.js.json', 'lib/chat-panel.js'],
   ['lib_client.js.json', 'lib/client.js'],
   ['lib_index.js.json', 'lib/index.js'],

@@ -97,7 +97,7 @@
 dsh plugin --profile desktop add dsh-pet
 
 # 2. патч
-git clone <этот репозиторий> dsh-pet-ru
+git clone https://github.com/loveisdapowah/dsh-pet-ru.git
 cd dsh-pet-ru
 node apply.mjs --profile desktop --install-config
 
@@ -114,7 +114,7 @@ node apply.mjs --profile desktop --install-config
 Скопируйте это сообщение и отправьте своему агенту в DSH (подставьте URL репозитория):
 
 ```text
-Возьми репозиторий dsh-pet-ru: <URL_РЕПОЗИТОРИЯ>.
+Возьми репозиторий dsh-pet-ru: https://github.com/loveisdapowah/dsh-pet-ru.
 Установи русский патч плагина dsh-pet:
 1) склонируй репозиторий в D:\DSH\dsh-pet-ru (если уже есть — обнови git pull);
 2) проверь установленную версию dsh-pet (package.json в профиле desktop);
@@ -135,7 +135,7 @@ node apply.mjs --profile desktop --install-config
 
 ```text
 dsh-pet обновился до версии <ВЕРСИЯ>.
-Прочитай инструкцию <URL_РЕПОЗИТОРИЯ>/UPDATE.md и обнови русскую локализацию:
+Прочитай инструкцию https://github.com/loveisdapowah/dsh-pet-ru/UPDATE.md и обнови русскую локализацию:
 проверь, что нового появилось и что осталось перевести, пересобери data/*.json
 через tools/gen_tables.mjs, проверь патч на чистой копии и закоммить изменения.
 ```

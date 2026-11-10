@@ -1,6 +1,6 @@
 # UPDATE.md — как обновить русский патч под новую версию dsh-pet
 
-Инструкция для агента. Патч собран и проверен на **dsh-pet 0.4.1**. Когда плагин
+Инструкция для агента. Патч собран и проверен на **dsh-pet 0.4.7**. Когда плагин
 обновится, строки в бандлах изменятся, и часть блоков в `data/*.json` перестанет
 совпадать. Ниже — порядок действий, чтобы найти новое и дособрать патч.
 
@@ -17,7 +17,7 @@
 (Get-Content "$env:USERPROFILE\.dsh\profiles\desktop\node_modules\dsh-pet\package.json" -Raw | ConvertFrom-Json).version
 ```
 
-Если версия **0.4.1** — обновление не нужно, ставьте как обычно (`node apply.mjs`).
+Если версия **0.4.7** — обновление не нужно, ставьте как обычно (`node apply.mjs`).
 
 ## 2. Скачать чистую версию
 
@@ -42,7 +42,7 @@ node apply.mjs --pkg "$w\ru" --dry-run --verbose
 
 ## 4. Найти, что изменилось в интерфейсе
 
-Сравните чистую старую (0.4.1) и чистую новую версии:
+Сравните чистую предыдущую (0.4.7) и чистую новую версии:
 
 ```powershell
 git diff --no-index -U3 -- "D:\DSH\Main\.tmp-ru-clean\package\lib\client.js" "$w\package\lib\client.js"
@@ -91,7 +91,7 @@ node tools/gen_tables.mjs --clean "$w\package" --patched "$w\ru" --out data
 
 ## 7. Обновить версию и проверить
 
-- В `apply.mjs` поменяйте `const TESTED_VERSION = '0.4.1'` на новую.
+- В `apply.mjs` поменяйте `const TESTED_VERSION = '0.4.7'` на новую.
 - Прогоните на свежей копии:
 
 ```powershell

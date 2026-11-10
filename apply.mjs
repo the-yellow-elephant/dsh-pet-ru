@@ -3,7 +3,7 @@
  * dsh-pet-ru — русская локализация плагина dsh-pet (DeepSeek Harness).
  *
  * Ставит русский интерфейс, русские мемы, шрифт Nunito и русский конфиг
- * поверх чистой установки dsh-pet 0.4.1. Одна команда:
+ * поверх чистой установки dsh-pet 0.4.7. Одна команда:
  *
  *   node apply.mjs
  *   node apply.mjs --dry-run
@@ -31,7 +31,7 @@ const verbose = flag('verbose');
 const profileArg = value('profile', undefined);
 const pkgArg = value('pkg', undefined);
 
-const TESTED_VERSION = '0.4.1';
+const TESTED_VERSION = '0.4.7';
 const dataDir = join(here, 'data');
 const fontsDir = join(here, 'assets', 'fonts');
 const memesDir = join(here, 'assets', 'memes-ru');

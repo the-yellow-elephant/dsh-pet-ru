@@ -105,8 +105,26 @@ dsh-pet обновился до версии <ВЕРСИЯ>.
 
 ## Обновление и откат
 
-Патч правит `node_modules` напрямую. После обновления/переустановки dsh-pet
-он слетает — просто запустите `node apply.mjs` снова (идемпотентно).
+Патч правит `node_modules` напрямую, поэтому **менеджер плагинов DSH может не суметь
+обновить dsh-pet поверх пропатченной копии** (ошибка вида «update failed … restoration
+of the previous build could not be verified»).
+
+Правильный порядок обновления:
+
+1. вернуть чистый плагин:
+   ```sh
+   dsh plugin --profile desktop remove dsh-pet
+   dsh plugin --profile desktop add dsh-pet
+   ```
+   или обновить через Discover;
+2. запустить патч заново:
+   ```sh
+   node apply.mjs --profile desktop --install-config
+   ```
+3. перезапустить DSH.
+
+Если версия плагина изменилась — сначала прочитайте [UPDATE.md](UPDATE.md)
+и обновите таблицы, иначе часть строк останется непереведённой.
 
 Откат:
 
